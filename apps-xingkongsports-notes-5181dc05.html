@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>星空体育 · 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f7f4ed;
+            font-family: 'Segoe UI', Roboto, 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+            color: #2b2b2b;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page-wrap {
+            max-width: 760px;
+            width: 100%;
+            background-color: #fefbf6;
+            padding: 2.4rem 2rem 3rem;
+            border-radius: 36px 36px 28px 28px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.02), 0 2px 8px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e8e0d3;
+        }
+
+        /* 文章排版 */
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #1e1e1e;
+            margin-top: 0.2rem;
+            margin-bottom: 0.25rem;
+            border-left: 4px solid #b0a28d;
+            padding-left: 1rem;
+            line-height: 1.3;
+        }
+        .subhead {
+            color: #6c6559;
+            font-weight: 350;
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+            padding-left: 1.4rem;
+            border-bottom: 1px dashed #ddd6c9;
+            padding-bottom: 0.6rem;
+        }
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 450;
+            margin: 2rem 0 0.6rem;
+            color: #302b24;
+            border-bottom: 1px solid #ece3d9;
+            padding-bottom: 0.25rem;
+        }
+        p {
+            margin: 1rem 0;
+        }
+
+        /* 引用块 / 提示框 */
+        .insight-box {
+            background: #f2ece2;
+            border-left: 6px solid #b0a28d;
+            padding: 1.2rem 1.4rem;
+            margin: 1.6rem 0;
+            border-radius: 0 20px 20px 0;
+            font-size: 0.975rem;
+            color: #3b362f;
+        }
+        .insight-box strong {
+            font-weight: 550;
+            color: #1a1713;
+        }
+
+        .highlight-card {
+            background: #ffffff;
+            border: 1px solid #e2d9cc;
+            padding: 1.2rem 1.4rem;
+            margin: 1.6rem 0;
+            border-radius: 28px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+        }
+        .highlight-card p {
+            margin: 0.4rem 0;
+        }
+
+        .faq-mini {
+            background: #f9f5ee;
+            padding: 1rem 1.3rem;
+            border-radius: 30px;
+            margin: 1.8rem 0 0.8rem;
+        }
+        .faq-mini dt {
+            font-weight: 500;
+            margin-top: 0.8rem;
+            margin-bottom: 0.2rem;
+            color: #2f2a23;
+        }
+        .faq-mini dd {
+            margin-left: 0.6rem;
+            padding-left: 0.6rem;
+            border-left: 2px solid #d3cab9;
+            color: #49433b;
+            font-size: 0.95rem;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #4f4a40;
+            text-decoration: underline;
+            text-underline-offset: 0.2rem;
+            text-decoration-color: #c7bcab;
+            transition: all 0.15s;
+        }
+        a:hover {
+            color: #1f1b15;
+            text-decoration-color: #8f7e68;
+        }
+        /* 强制只有「星空体育」四个字作为可见文本 */
+        .sentence-link {
+            font-weight: 450;
+            background: #f0e9df;
+            padding: 0.05rem 0.35rem;
+            border-radius: 6px;
+            text-decoration: none;
+            border-bottom: 2px solid #b9ab98;
+        }
+        .sentence-link:hover {
+            background: #e4dace;
+            border-bottom-color: #6d5f4e;
+        }
+
+        .button-outline {
+            display: inline-block;
+            background: transparent;
+            border: 1.5px solid #b0a28d;
+            color: #2b261f;
+            padding: 0.5rem 1.4rem;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: 450;
+            transition: all 0.2s;
+            margin: 0.4rem 0;
+        }
+        .button-outline:hover {
+            background: #d9cfbe;
+            border-color: #7f715b;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2d9cc;
+            margin: 2rem 0 1rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .page-wrap {
+                padding: 1.6rem 1.2rem 2rem;
+                border-radius: 28px;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .subhead {
+                font-size: 0.9rem;
+                padding-left: 1.1rem;
+            }
+            .insight-box {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <h1>星空体育 · 日常即赛场</h1>
+    <div class="subhead">关于赛事内容、灵感与使用视角的笔记</div>
+
+    <p>体育的魅力，有时不在于绝杀瞬间，而在于日复一日的节奏感。星空体育这个项目，最初源于一群喜欢在夜间看球、晨跑前刷数据的朋友——他们把信息流、赛程、统计自然地揉进一个界面里。这里没有夸张的口号，只有你认为“有用”的东西。</p>
+
+    <div class="insight-box">
+        <strong>一点使用感受</strong> —— 星空体育更像一个赛事内容聚合的“工具箱”。你可以快速浏览焦点赛事、翻阅近期战绩，甚至留意到那些平时忽略的联赛细节。界面清爽，没有多余的弹窗打扰。
+    </div>
+
+    <h2>摘几个亮点</h2>
+    <div class="highlight-card">
+        <p>◈ <strong>赛事卡片流</strong> —— 按时间线铺开，今天有什么、明天凌晨几点，一目了然。不用翻三四级菜单。</p>
+        <p>◈ <strong>多联赛覆盖</strong> —— 欧洲主流、亚洲联赛、南美解放者杯…… 覆盖面比想象中要广，对喜欢跨联赛观察的爱好者很友好。</p>
+        <p>◈ <strong>数据轻量化</strong> —— 不堆砌密密麻麻的表格，而是把控球率、射正数、关键球员用简约的方式呈现，阅读负担小。</p>
+    </div>
+
+    <h2>什么场景下我会想到它</h2>
+    <p>周六早晨，倒一杯咖啡，打开 <a href="https://apps-xingkongsports.com" class="sentence-link">星空体育</a> 扫一眼凌晨的比赛结果——比刷社交网络更快，也没有夸张的标题。或者晚上计划看一场焦点战，提前看看双方近5场走势、伤停情况。它适合那种“想看球但又不想被信息轰炸”的人。</p>
+
+    <div class="insight-box">
+        <strong>一个很细节的体验：</strong> 页面里偶尔会插入一段简洁的赛事短评或冷门数据（比如某位球员的跑动距离），不是长篇分析，而是让人“啊，原来如此”的轻科普。不打扰，但增加了停留的理由。
+    </div>
+
+    <h2>一些基于日常的使用建议</h2>
+    <p>• 把常用联赛加入“关注”列表（如果有这个功能），下次打开就能看到筛选后的内容。<br>
+    • 赛前15分钟刷新一下，首发阵容和实时数据更新得比较及时。<br>
+    • 如果你是数据控，可以多留意“预期进球(xG)”这类进阶数据——虽然呈现得比较含蓄，但对分析比赛走向挺有帮助。<br>
+    • 手机浏览器直接访问即可，没有强制下载，界面自适应做得不错，横竖屏都舒服。</p>
+
+    <h2>常见小疑问</h2>
+    <div class="faq-mini">
+        <dl>
+            <dt>Q: 星空体育需要注册吗？</dt>
+            <dd>A: 直接打开就能浏览大部分内容，目前没有强制注册流程。部分深度互动功能可能需要简单登录，但浏览赛事信息基本无门槛。</dd>
+            <dt>Q: 数据来源可靠吗？</dt>
+            <dd>A: 平台聚合多家公开体育数据接口，并做了交叉校验。日常看球查赛果完全够用，专业级统计建议配合官方数据源。</dd>
+            <dt>Q: 移动端和电脑端体验差异大吗？</dt>
+            <dd>A: 核心功能一致，移动端针对触屏做了卡片式布局，电脑端信息密度稍高。我平时用手机更多，加载速度和交互都很顺滑。</dd>
+        </dl>
+    </div>
+
+    <hr>
+
+    <p style="font-size: 0.94rem; margin-bottom: 0.5rem;">如果你对某个联赛或者球队的数据有特别兴趣，不妨直接去 <a href="https://apps-xingkongsports.com" class="sentence-link">星空体育</a> 里探索——界面本身的设计会引导你发现一些之前没注意到的内容板块。保持开放心态，体育世界总能给你一点新鲜感。</p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0.6rem; margin-top: 1.6rem;">
+        <a href="https://apps-xingkongsports.com" class="button-outline">星空体育</a>
+        <span style="color: #a69b8b; font-size: 0.85rem; align-self: center;">— 赛事内容聚合 · 简洁直观</span>
+    </div>
+
+    <p style="margin-top: 2.2rem; font-size: 0.8rem; color: #9a9183; border-top: 1px solid #e3dbce; padding-top: 1rem; letter-spacing: 0.02em;">
+        页面仅作产品功能说明，不构成任何投资或博彩建议。所有体育数据仅供参考，请以官方发布为准。
+    </p>
+</div>
+</body>
+</html>
