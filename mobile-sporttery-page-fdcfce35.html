@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · 竞彩网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #fbe9d7 0%, #f7d9c4 60%, #f0ccb5 100%);
+            color: #3f2e22;
+            line-height: 1.6;
+            padding: 2rem 1.2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-container {
+            max-width: 980px;
+            width: 100%;
+        }
+
+        /* 卡片风格 */
+        .card {
+            background: #fffcf8;
+            border-radius: 32px;
+            padding: 2.4rem 2rem;
+            box-shadow: 0 12px 24px rgba(100, 60, 30, 0.10);
+            margin-bottom: 2.4rem;
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(255, 240, 225, 0.6);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 16px 32px rgba(90, 50, 20, 0.12);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            text-align: center;
+            padding: 3.2rem 2rem 2.8rem;
+            background: linear-gradient(125deg, #fff6ed, #fdebd9);
+            border-radius: 44px;
+            margin-bottom: 2.4rem;
+            border: 1px solid #f5dcc5;
+            box-shadow: 0 8px 18px rgba(130, 70, 30, 0.08);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #4a3426;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1.2rem;
+            color: #6b4f3b;
+            background: #f4e4d6;
+            display: inline-block;
+            padding: 0.3rem 1.6rem;
+            border-radius: 40px;
+            font-weight: 450;
+            margin-top: 0.6rem;
+            backdrop-filter: blur(2px);
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 1.2rem auto 0;
+            font-size: 1.1rem;
+            color: #574237;
+        }
+
+        /* 按钮感链接 */
+        .btn-link {
+            display: inline-block;
+            background: #e6d0bb;
+            color: #3f2c1e;
+            padding: 0.55rem 2rem;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: 1px solid #dbbca0;
+            box-shadow: 0 3px 6px rgba(120, 70, 30, 0.06);
+            letter-spacing: 0.02em;
+        }
+
+        .btn-link:hover {
+            background: #dcc1a8;
+            border-color: #c7a586;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(100, 55, 20, 0.10);
+        }
+
+        .btn-link:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* 二级标题 */
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 580;
+            color: #4a3426;
+            margin-bottom: 1.2rem;
+            border-left: 6px solid #dbb99b;
+            padding-left: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 540;
+            color: #543e2e;
+            margin: 1.4rem 0 0.6rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6rem;
+            margin: 1.4rem 0 0.4rem;
+        }
+
+        .feature-item {
+            background: #f7ede2;
+            border-radius: 24px;
+            padding: 1.4rem 1.4rem;
+            border: 1px solid #ecdacb;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-size: 1.1rem;
+            color: #4b3527;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-item p {
+            font-size: 0.97rem;
+            color: #4f3b2d;
+        }
+
+        .faq-list {
+            list-style: none;
+            margin: 1.2rem 0 0.4rem;
+        }
+
+        .faq-list li {
+            padding: 0.9rem 0;
+            border-bottom: 1px dashed #e6d2be;
+        }
+
+        .faq-list li:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 550;
+            color: #4b3425;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .faq-a {
+            color: #5b4536;
+            font-size: 0.98rem;
+            display: block;
+            padding-left: 0.4rem;
+        }
+
+        .access-note {
+            background: #f2e4d6;
+            border-radius: 28px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e3cdb9;
+        }
+
+        .access-note p {
+            font-size: 1.05rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.4rem;
+            justify-content: center;
+            padding: 1.6rem 0 0.4rem;
+            border-top: 1px solid #ddc8b4;
+            margin-top: 1.8rem;
+        }
+
+        .footer-links a {
+            color: #4f392b;
+            text-decoration: none;
+            font-size: 0.98rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 30px;
+            transition: background 0.15s;
+        }
+
+        .footer-links a:hover {
+            background: #e9d6c4;
+        }
+
+        .inline-link {
+            color: #6f4d30;
+            text-decoration: none;
+            font-weight: 490;
+            border-bottom: 1px solid #c9ad93;
+            transition: border-color 0.2s;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: #7f5c3e;
+        }
+
+        /* 响应式 */
+        @media (max-width: 700px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .sub {
+                font-size: 1rem;
+            }
+            .card {
+                padding: 1.8rem 1.2rem;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+                padding-left: 0.7rem;
+            }
+            .access-note {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-container">
+
+    <!-- hero 区 -->
+    <div class="hero">
+        <h1>轻松认识竞彩</h1>
+        <div class="sub">简明指南 · 友好提醒</div>
+        <p>不论你是初次接触体育竞彩，还是想更顺畅地使用移动端服务，这里为你梳理了基础信息与访问建议，帮助你省心起步。</p>
+    </div>
+
+    <!-- 优势区 -->
+    <div class="card">
+        <h2>为什么选择从这里了解</h2>
+        <div class="grid-2">
+            <div class="feature-item">
+                <strong>📱 移动优先</strong>
+                <p>页面专为手机与平板优化，触控操作流畅，信息一目了然，省去缩放与等待。</p>
+            </div>
+            <div class="feature-item">
+                <strong>🧭 步骤清晰</strong>
+                <p>从找到正确地址到完成选择，每个环节都有提醒，不让你在繁杂中迷失。</p>
+            </div>
+            <div class="feature-item">
+                <strong>🕊️ 低门槛说明</strong>
+                <p>用自然语言解释常见术语与规则，不需要提前掌握专业词汇。</p>
+            </div>
+            <div class="feature-item">
+                <strong>🔐 访问小贴士</strong>
+                <p>提供网络环境与设备适配的温和建议，让连接更稳定。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 说明区：简明指南 + 访问提醒 -->
+    <div class="card">
+        <h2>简明指南 · 访问提醒</h2>
+        <p style="margin-bottom: 0.8rem;">想使用移动端体育竞彩服务，核心是找到正确的站点并熟悉基本流程。以下几步可以让你少走弯路：</p>
+        <ul style="list-style: none; padding-left: 0.2rem;">
+            <li style="margin-bottom: 0.8rem; display: flex; gap: 0.6rem;">
+                <span style="background: #ddc4ae; color: #3f2b1b; width: 26px; height: 26px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;">1</span>
+                <span><strong>打开官方移动页面</strong> — 直接在手机浏览器中输入 <a href="https://mobile--sporttery.com" class="inline-link">竞彩网</a>，即可进入适配界面。建议使用系统自带浏览器或 Chrome、Safari。</span>
+            </li>
+            <li style="margin-bottom: 0.8rem; display: flex; gap: 0.6rem;">
+                <span style="background: #ddc4ae; color: #3f2b1b; width: 26px; height: 26px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;">2</span>
+                <span><strong>熟悉基础分类</strong> — 首页通常包含赛事列表、玩法说明与资讯，按引导浏览即可。若遇到加载缓慢，可尝试切换网络或刷新页面。</span>
+            </li>
+            <li style="margin-bottom: 0.8rem; display: flex; gap: 0.6rem;">
+                <span style="background: #ddc4ae; color: #3f2b1b; width: 26px; height: 26px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;">3</span>
+                <span><strong>注意环境与安全</strong> — 在公共网络下建议避免透露个人敏感信息。认准官方域名，不轻信第三方仿冒链接。</span>
+            </li>
+        </ul>
+
+        <div class="access-note">
+            <p><span style="font-weight: 600;">💡 访问提醒：</span> 移动端页面会自适应屏幕，如果显示异常，请检查浏览器是否开启桌面模式并关闭。保持系统与浏览器更新，能获得更稳定的体验。如果你遇到白屏或跳转问题，可稍后再试或更换网络环境。</p>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="card">
+        <h2>常见疑问摘要</h2>
+        <ul class="faq-list">
+            <li>
+                <span class="faq-q">❓ 移动端和电脑端内容一样吗？</span>
+                <span class="faq-a">核心信息和服务是一致的，但移动端布局更紧凑，按钮更大，方便手指操作。部分图表会以简化形式展示。</span>
+            </li>
+            <li>
+                <span class="faq-q">❓ 是否需要注册才能浏览？</span>
+                <span class="faq-a">大部分赛事信息与玩法说明无需登录即可查阅。涉及个人操作时需要根据页面提示完成注册或验证。</span>
+            </li>
+            <li>
+                <span class="faq-q">❓ 如何确认我访问的是正确站点？</span>
+                <span class="faq-a">建议直接输入 <a href="https://mobile--sporttery.com" class="inline-link">竞彩网</a> 地址，或从可靠渠道获取链接。注意核对域名拼写，避免多余字符。</span>
+            </li>
+            <li>
+                <span class="faq-q">❓ 页面加载较慢怎么办？</span>
+                <span class="faq-a">可尝试关闭后台应用、切换 Wi-Fi 与移动数据，或清理浏览器缓存。如持续异常，可能是网络环境限制，可换个时段再试。</span>
+            </li>
+        </ul>
+        <p style="margin-top: 1rem; font-size: 0.95rem; color: #5a4434;">以上仅为基础指引，具体流程请以实际页面为准。保持轻松心态，探索适合自己的使用节奏。</p>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="card" style="padding: 1.6rem 2rem;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.8rem;">
+            <span style="font-weight: 500; color: #503b2b;">了解更多</span>
+            <a href="https://mobile--sporttery.com" class="btn-link">竞彩网</a>
+        </div>
+        <div class="footer-links">
+            <a href="#">使用说明</a>
+            <a href="#">常见问题</a>
+            <a href="#">安全提示</a>
+            <a href="#">关于我们</a>
+        </div>
+        <p style="margin-top: 1.2rem; font-size: 0.82rem; color: #7c6553; text-align: center; border-top: 1px solid #eddccc; padding-top: 1rem;">
+            页面仅为信息介绍，不构成任何建议。请根据自身情况理性选择。
+        </p>
+    </div>
+
+</div>
+</body>
+</html>
